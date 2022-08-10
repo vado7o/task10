@@ -8,6 +8,7 @@ Console.WriteLine("Введите трёхзначное число: ");
 str = Console.ReadLine();
 if(int.TryParse(str, out int number)) {
     num = number;
+    if(num < 0) { str = str.Remove(0,1); num = num * -1; }
     if(str.Length == 3) {
         break;
     }
